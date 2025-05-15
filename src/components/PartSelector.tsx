@@ -35,7 +35,7 @@ export default function PartSelector({
   // ──────────────────────────────── fetch + compatibilidade
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/api/components/${category.toLowerCase()}`)
+      .get(`https://scintillating-respect-production-2456.up.railway.app/api/components/${category.toLowerCase()}`)
       .then((res) => {
         let data: ComponentData[] = res.data;
         if (category === 'Placa Mãe' && selectedParts['CPU']) {
